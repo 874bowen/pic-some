@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../context/context";
 import { getClass } from "../utils";
 import useHover from "../hooks/useHover";
@@ -31,7 +31,7 @@ function Image({ img  }: any) {
 	}
 	
 	return (
-		<div ref={ref} className={`${getClass(Number(img.id))} image-container`}>
+		<div ref={ref as React.RefObject<HTMLDivElement>} className={`${getClass(Number(img.id))} image-container`}>
 			<img src={img.url} className="image-grid" />
 			{heartIcon()}
 			{cartIcon()}
