@@ -1,6 +1,3 @@
-import React from "react"
-
-
 function CartItem({item, removeFromCart}: any) {
     return (
         <div className="cart-item">
